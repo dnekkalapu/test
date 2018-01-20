@@ -19,15 +19,10 @@ export class ContentComponent implements OnInit {
     this.getPosts();
   }
 
-  getPosts() {
-    this.getPosts();
-    this.contentQueryChange.emit(value);
-  }
-
   private getPosts() {
     this._posts.getPosts(this.contentQuery)
     .subscribe(resp => {
-      this.post = resp;
+      this.posts = resp;
     });
   }
 

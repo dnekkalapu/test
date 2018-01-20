@@ -5,8 +5,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class MessagesService {
 
-  base = "";
-  stage = "";
+  base = "https://gfftupcgz3.execute-api.us-east-1.amazonaws.com/";
+  stage = "dev";
 
   constructor(private _http: Http) {}
 

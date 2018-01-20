@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { MessagesService } from '../messages.service';
 
 @Component({
   selector: 'app-jumbotron',
@@ -39,6 +40,10 @@ export class JumbotronComponent implements OnInit {
         this.jumbo_message = resp.message;
         this.jumbo_action = resp.action;
       });
+  }
+
+  showJumboMessage() {
+    this.buildMessage()
   }
 
 }
