@@ -1,0 +1,21 @@
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Content Search</label>
+          <input type="text" class="form-control" [(value)]="contentQuery" (change)="getPosts($event.target.value)" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div *ngFor="let post of posts; let i = index" class="card">
+        <a href="{{ post.images.original.url }}">
+          <div [ngStyle]="{ background: 'url(' + post.images.original.url + ')' }" class="giphy"></div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
